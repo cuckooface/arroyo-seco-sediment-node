@@ -16,9 +16,11 @@ The argument behind the project is in `THESIS.md`. Read it before writing any sl
   - `trim.swift`: rasterizes a PDF page and crops away the white margins.
   - `comp.swift`: makes a vector composite of the building section into the overall section.
 
-## Current deck (12 slides)
+## Current deck (12 slides + 11 question slides)
 
 01 Title · 02 Provocation (Ukeles quote) · 03 Site plan (`materials/PLAN.pdf`) · 04 Thesis + sediment loop · 05 Powers of Ten (crops of joint, sliver, building, site) · 06 Section detail · 07 Assemblies (floor plate / wall) · 08 Sliver section drawing · 09 Sliver render (full bleed) · 10 Building section · 11 Overall section with the full building composited in · 12 Model photographs.
+
+Questions appendix (backup slides for the final review, built by the `QUESTIONS` block near the end of `deck.html`): 13 Index · 14 Floor plates · 15 Peel (`img/render_top.jpg`, from `prez_render.jpg`) · 16 Lost maintenance (timeline + Rose Bowl unit chart, sourced) · 17 Labor (`img/sliver_crew.png`) · 18 Permanence · 19 Sag (two-state diagram) · 20 Cork (`img/detail_cork.png`) · 21 Strap (`img/detail_strap.png`) · 22 Fastening · 23 Rammed earth (lift diagram). Their text was drafted by Claude from `FINAL_QA.md` and needs Brandon's review. `ASSN_Deck_Updated.pdf` is still the 12-slide Mac export; rebuild on the Mac to include the appendix with the right fonts (Linux substitutes Helvetica Neue and IBM Plex Mono).
 
 How slide 11 was made: `deck/img/overall_comp.pdf` places `BUILDING_SECTION.pdf` over `OVERALL_SECTION.pdf` with a multiply blend, scale 1.00407, offset (-1739.9, -28.98) pt. The alignment was taken from the bridge lamp posts and deck lines. The original single sliver was erased (x 2576-2782, y 688-957, measured top-down in overall-page points).
 
