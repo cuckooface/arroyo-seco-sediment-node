@@ -156,158 +156,42 @@ function icon(s,b,type){var o='',seed=type.length*97+13,i,x,y;var K='#141414';
     for(i=0;i<3;i++){x=30+i*55;o+='<line x1="'+x+'" y1="'+gy(x).toFixed(1)+'" x2="'+(x+16)+'" y2="'+gy(x).toFixed(1)+'" stroke="'+K+'" stroke-width="1.2"/>'}}
   svgAt(s,b,o)}
 
-// 01 TITLE : left half full bleed, right half quiet with low inset
-var p=page('Title','Midterm',{noLeft:true});
-(function(){var im=document.createElement('img');im.src=HERO;im.alt='Arroyo Seco channel: algae, water, and sediment';im.style.cssText='position:absolute;top:0;left:0;width:960px;height:1080px;object-fit:cover';p.appendChild(im)})();
-tf(p,[200,GU+80,420,W-M],NAME+'\r\rHume Vertical Studio\rSCI-Arc FA26\rMidterm Review, October 19, 2026','Lede');
-tf(p,[460,GU+80,480,W-M],'Arroyo Seco Stables, South Pasadena','Micro');
-(function(){var im=document.createElement('img');im.src=SITEPH;im.alt='Debris in channel sediment: circuit board and battery';im.style.cssText='position:absolute;top:600px;left:1040px;width:800px;height:360px;object-fit:cover';p.appendChild(im)})();
-tag(p,40,M,COORD);done(p);
-
-// 02 QUOTE : small text in vast space, river strip cut out on right
-p=page('Quote','Provocation');
-tf(p,[440,M,640,GU-120],'\u201CAfter the revolution, who\u2019s going to pick up the garbage on Monday morning?\u201D','Quote');
-tf(p,[668,M,684,GU-120],'Mierle Laderman Ukeles, Manifesto for Maintenance Art, 1969','Micro');
-
-done(p);
-
-// 03 SITE : full-bleed plan, program legend on white tags
-p=page('Site analysis','Site');
-crop(p,[100,0,H,W],'img/site_plan.png','110% auto','50% 52%');
-tag(p,120,M,'Site plan   /   north up');
-(function(){var c=tf(p,[160,M,224,560],'Arroyo Seco Stables, South Pasadena. Lower Arroyo, downstream of Devil\u2019s Gate Dam.','Body');c.style.background='#fff';c.style.padding='6px 8px'})();
-done(p);
-
-// 04 THESIS + SYSTEM : loop as cut-out objects left, text right
-p=page('Thesis and system','Thesis');
-var ox=GU/2,oy=560,R=260;
-[['Sediment',-1,0],['Soil',0,1],['Plants',1,0],['Slopes',0,-1]].forEach(function(k){
-  var y=oy+k[1]*R,x=ox+k[2]*R;icon(p,[y-70,x-100,y+70,x+100],k[0]);
-  tf(p,[y+80,x-100,y+96,x+100],k[0],'MicroC')});
-(function(){var o='';for(var q=0;q<4;q++){var a0=(-90+q*90+32)*Math.PI/180,a1=(-90+q*90+58)*Math.PI/180,
-  x0=ox+R*Math.cos(a0),y0=oy+R*Math.sin(a0),x1=ox+R*Math.cos(a1),y1=oy+R*Math.sin(a1),tx=-Math.sin(a1),ty=Math.cos(a1),nx=-ty,ny=tx;
-  o+='<path d="M'+x0.toFixed(1)+' '+y0.toFixed(1)+' A'+R+' '+R+' 0 0 1 '+x1.toFixed(1)+' '+y1.toFixed(1)+'" fill="none" stroke="#141414" stroke-width="1"/>';
-  o+='<path d="M'+(x1-tx*10+nx*5).toFixed(1)+' '+(y1-ty*10+ny*5).toFixed(1)+'L'+x1.toFixed(1)+' '+y1.toFixed(1)+'L'+(x1-tx*10-nx*5).toFixed(1)+' '+(y1-ty*10-ny*5).toFixed(1)+'" fill="none" stroke="#141414" stroke-width="1"/>'}
-  svgAt(p,[0,0,H,GU],o)})();
-tf(p,[200,GU+80,420,W-M],'Maintenance that is hidden gets abandoned. A sediment node makes it public, permanent, and productive.','Thesis');
-tf(p,[500,GU+80,516,W-M],'Problem','Micro');
-tf(p,[528,GU+80,640,cx(11)],"Fire-loosened sediment from the San Gabriels is trapped at Devil's Gate Dam, removed each year, and trucked away as waste out of public view.",'Body');
-tf(p,[680,GU+80,696,W-M],'Proposal','Micro');
-tf(p,[708,GU+80,820,cx(11)],"A public station where the river's maintenance becomes visible, paid work, and that work rebuilds the land, the river, and the people who do it.",'Body');
-tf(p,[860,GU+80,876,W-M],'Sediment > soil > plants > slopes > less sediment','Micro');
-done(p);
-
-// 05 POWERS OF TEN : cut-outs growing left to right, bottoms aligned
-p=page('Powers of Ten','Powers of Ten');
-var base=760,xs=M+40,sz=[[140,'Joint','1" = 1\'-0"','06-07'],[220,'Sliver','1/4" = 1\'-0"','08-09'],[340,'Building','1/16" = 1\'-0"','10'],[500,'Site','1/32" = 1\'-0"','03, 11']];
-var CR={Joint:['img/detail.png','auto 260%','31% 40%'],Sliver:['img/sliver_section.png','auto 200%','50% 30%'],Building:['img/building_section.png','auto 150%','84% 20%'],Site:['img/site_plan.png','420% auto','51% 57%']};
-sz.forEach(function(k){var c=CR[k[1]];crop(p,[base-k[0],xs,base,xs+k[0]],c[0],c[1],c[2]);
-  tf(p,[base+24,xs,base+40,xs+300],k[1]+'   /   '+k[3],'Micro');tf(p,[base+48,xs,base+66,xs+300],k[2],'Scale');xs+=k[0]+120});
-done(p);
-
-// DRAWINGS
-function rightDrawing(name,label,scale,b){var p=page(name,label);
-  tf(p,[880,M,896,GU-80],name,'Micro');tf(p,[904,M,922,GU-80],scale,'Scale');tf(p,[940,M,1000,GU-200],CAP,'Body','vb');
-  photo(p,b,'Place: '+name+'\r'+scale);done(p)}
-p=page('Detail Drawing','Joint');
-tf(p,[880,M,896,GU-80],'Section Detail','Micro');tf(p,[904,M,922,GU-80],'1" = 1\'-0"','Scale');tf(p,[940,M,1020,GU-120],'The floor is a lashed sandwich: CLT plate, compressed cork, and tile hung below, bound at the bullnose edge by a Dyneema strap the crew can reach and retension.','Body','vb');
-img(p,[90,M,850,W-M],'img/detail.png');
-done(p);
-// 07 ASSEMBLIES : floor plate exploded left, wall sandwich exploded right
-p=page('Assemblies','Assemblies');
-tf(p,[140,160,156,GU-80],'Floor plate   /   top to bottom','Micro');
-[[220,300,'CLT\rstructure','clt'],[340,380,'Cork\rimpact, thermal','cork'],[420,500,'Sediment earth tiles\rmass, ceiling below','earth'],[540,552,'Dyneema binding\rretensioned by crew','dyneema'],[590,602,'Steel stop chain\rhidden fail-safe','chain']].forEach(function(l){
-  hatch(p,[l[0],160,l[1],720],l[3]);var c=(l[0]+l[1])/2;tf(p,[c-16,750,c+16,940],l[2],'Micro','vc')});
-tf(p,[700,160,860,840],'The floor is made of what the node processes. The Dyneema creeps, the earth layer sags, and the crew retensions it: maintenance performed in public view.','Body');
-tf(p,[140,GU+80,156,W-M],'Wall   /   outside to inside','Micro');
-[[1040,1100,'Skin\rCLT or ply','ply'],[1160,1340,'Cork core\rinsulation, damping','cork'],[1400,1460,'Skin\rCLT or ply','ply'],[1540,1700,'Spacer frame\redges, openings','timber']].forEach(function(l){
-  hatch(p,[220,l[0],600,l[1]],l[3]);tf(p,[624,l[0],660,l[0]+190],l[2],'Micro')});
-tf(p,[700,GU+80,860,cx(11)],'Two thin skins held apart act like an I-beam: stiffness from depth, not mass. The cork core gives continuous insulation and acoustic damping.','Body');
-tf(p,[980,160,996,GU-80],'Exploded in section   /   hatched by material','Micro');
-done(p);
-// sliver drawing: tall strip, full height
-p=page('Sliver Drawing','Sliver');
-tf(p,[880,M,896,GU-80],'Sliver Drawing','Micro');tf(p,[904,M,922,GU-80],'Not to scale','Scale');tf(p,[940,M,1020,GU-120],'One sliver holds the whole loop: sediment is hoisted in, worked into soil, and grown into plants, with the crew visible on every floor.','Body','vb');
-img(p,[80,GU+80,1020,W-M],'img/sliver_section.png');done(p);
-// sliver model: left bleed, right inset
-p=page('Sliver Render','Sliver',{noLeft:true});
-img(p,[0,0,H,GU],'img/render.jpg','cover','50% 40%');
-tag(p,40,M,COORD);
-tf(p,[760,GU+80,776,W-M],'Sliver Render','Micro');tf(p,[784,GU+80,802,W-M],'Perspective from the river path','Scale');
-
-tf(p,[830,GU+80,920,cx(11)],'From the river path, the sliver rises beside the bridge on a single red mast, and the veil turns the work on each floor into silhouette.','Body');done(p);
-// sections + plan: bands across gutter
-function band(name,label,scale,b){var p=page(name,label);
-  tf(p,[b[0]-40,M,b[0]-24,GU-40],name,'Micro');tf(p,[b[0]-44,GU+40,b[0]-24,W-M],scale,'Scale');
-  photo(p,b,'Place: '+name+'\r'+scale);tf(p,[b[2]+30,M,b[2]+90,GU-120],CAP,'Body');done(p)}
-p=page('Building Section','Building');tf(p,[360,M,376,GU-40],'Building Section','Micro');tf(p,[356,GU+40,376,W-M],'1/16" = 1\'-0"','Scale');
-img(p,[400,0,676,W],'img/building_section.png');
-tf(p,[716,M,800,GU-120],'Set against the bridge\u2019s arches, one sliver stands on the bank on a single footing, leaving the channel and the riverbed clear.','Body');done(p);
-p=page('Overall Section','Site');
-tf(p,[380,M,396,GU-40],'Overall Section   /   site condition','Micro');tf(p,[376,GU+40,396,W-M],'1/32" = 1\'-0"','Scale');
-img(p,[420,0,800,W],'img/overall_comp.png');
-tf(p,[802,M,880,GU-120],'The three masses hang over the channel beneath the bridge, putting the river\u2019s upkeep in view of the road, the path, and the bridge.','Body');done(p);
-
-
-
-
-// 12 MODEL PHOTOS : left bleed, right inset + small
-p=page('Model photographs','Model',{noLeft:true});
-img(p,[0,0,H,GU],'img/_BIL4057.jpg','cover','50% 50%');
-tag(p,40,M,COORD);
-img(p,[160,GU+80,667,GU+460],'img/_BIL4060.jpg','cover');img(p,[160,W-M-380,667,W-M],'img/_BIL4072.jpg','cover');tf(p,[687,GU+80,703,GU+460],'02  /  Floor plates + mast','Micro');tf(p,[687,W-M-380,703,W-M],'03  /  Mast + veil','Micro');
-tf(p,[780,GU+80,796,W-M],'Model Photographs   /   01  Walls + veil','Micro');tf(p,[804,GU+80,822,W-M],'Three views','Scale');tf(p,[850,GU+80,940,cx(11)],'Ply walls, layered floor plates, and a clear printed veil: the model tests how the work reads as silhouette through the skin.','Body');
-done(p);
-
-// QUESTIONS : backup slides for the final review, one question per spread (text drafted from FINAL_QA.md)
-// col(): a flowing text column, so long answers stack without hand-set heights
+// ---- shared helpers for annotation and diagrams ----
+var K='#141414';
+// col(): a flowing text column, so stacked text needs no hand-set heights
 function col(s,b,items){var d=document.createElement('div');d.style.cssText='position:absolute;top:'+b[0]+'px;left:'+b[1]+'px;width:'+(b[2]-b[1])+'px';
   items.forEach(function(it){var e=document.createElement('div');e.className=(MONO[it[0]]?'mono ':'sans ')+it[0];e.textContent=it[1];e.style.whiteSpace='pre-wrap';e.style.margin='0 0 '+(it[2]||0)+'px';d.appendChild(e)});
   s.appendChild(d);return d}
-var QS=[['Floor plates','Why does every floor plate have its own shape?'],['Peel','Why do the floors and the envelope peel?'],['Lost maintenance','How much maintenance is usually lost?'],['Labor','Why are people working the site?'],['Permanence','Why should it be here only temporarily?'],['Sag','Why do the tectonics sag?'],['Cork','Why cork?'],['Strap','Why a cable, and why Dyneema?'],['Fastening','Why this fastening?'],['Rammed earth','Why rammed earth, and how is it made?']];
-var Q0=num+2;
-function Q(i,say,pts,extra){var p=page(QS[i][0],'Questions');
-  var it=[['Micro','Question   /   '+(i<9?'0':'')+(i+1),20],['Thesis',QS[i][1],24],['Lede',say,40]];
-  pts.forEach(function(x){it.push(['Micro',x[0],6]);it.push(['Body',x[1],22])});
-  if(extra)it.push(['Micro',extra,0]);
-  col(p,[140,GU+80,cx(11)],it);return p}
-var K='#141414';
+// lead(): thin leader from a label to a point on a drawing, dot at the point
+function lead(s,x1,y1,x2,y2){svgAt(s,[0,0,H,W],'<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+K+'" stroke-width=".9"/><circle cx="'+x2+'" cy="'+y2+'" r="3.5" fill="'+K+'"/>')}
+// note(): a white tag on a drawing with a leader to the point it names
+// the leader leaves the tag edge nearest the point and is drawn first so the tag sits on top
+function note(s,y,x,t,px,py){var ls=t.split('\n'),w=Math.max.apply(null,ls.map(function(l){return l.length}))*9+16,h=ls.length*16+8;
+  if(px!=null){var ax=px>x+w?x+w:px<x?x:px,ay=py<y?y:py>y+h?y+h:y+h/2;lead(s,ax,ay,px,py)}
+  tag(s,y,x,t)}
 function arrow(x0,y0,x1,y1){var a=Math.atan2(y1-y0,x1-x0),h=10;
   return '<line x1="'+x0+'" y1="'+y0+'" x2="'+x1+'" y2="'+y1+'" stroke="'+K+'" stroke-width="1.2"/><path d="M'+(x1-h*Math.cos(a-.45)).toFixed(1)+' '+(y1-h*Math.sin(a-.45)).toFixed(1)+'L'+x1+' '+y1+'L'+(x1-h*Math.cos(a+.45)).toFixed(1)+' '+(y1-h*Math.sin(a+.45)).toFixed(1)+'" fill="none" stroke="'+K+'" stroke-width="1.2"/>'}
 var PAT='<defs><pattern id="pcork" patternUnits="userSpaceOnUse" width="14" height="12"><circle cx="3" cy="3" r="1.1" fill="'+K+'"/><circle cx="10" cy="8" r=".8" fill="'+K+'"/><circle cx="7" cy="2" r="2.4" fill="none" stroke="'+K+'" stroke-width=".6"/></pattern>'+
   '<pattern id="ptile" patternUnits="userSpaceOnUse" width="8" height="8"><path d="M0 8L8 0M0 0L8 8" stroke="'+K+'" stroke-width=".6"/></pattern></defs>';
 
-// index
-p=page('Questions','Questions');
-tf(p,[440,M,520,GU-120],'Questions for the final review','Quote');
-tf(p,[560,M,600,GU-200],'Backup slides. Each one answers a question from the review, using the drawings in the main deck.','Body');
-QS.forEach(function(q,i){var y=200+i*68;tf(p,[y+4,GU+80,y+20,GU+160],''+(Q0+i),'Micro');tf(p,[y,GU+160,y+28,W-M],q[1],'Lede')});
+// ===== ACT 1 : THE PROBLEM =====
+
+// 01 TITLE : left half full bleed, right half quiet with low inset
+var p=page('Title','Final review',{noLeft:true});
+(function(){var im=document.createElement('img');im.src=HERO;im.alt='Arroyo Seco channel: algae, water, and sediment';im.style.cssText='position:absolute;top:0;left:0;width:960px;height:1080px;object-fit:cover';p.appendChild(im)})();
+tf(p,[200,GU+80,420,W-M],NAME+'\r\rHume Vertical Studio\rSCI-Arc FA26\rFinal Review','Lede');
+tf(p,[460,GU+80,480,W-M],'Arroyo Seco Stables, South Pasadena','Micro');
+(function(){var im=document.createElement('img');im.src=SITEPH;im.alt='Debris in channel sediment: circuit board and battery';im.style.cssText='position:absolute;top:600px;left:1040px;width:800px;height:360px;object-fit:cover';p.appendChild(im)})();
+tag(p,40,M,COORD);done(p);
+
+// 02 QUOTE : small text in vast space
+p=page('Quote','Provocation');
+tf(p,[440,M,640,GU-120],'“After the revolution, who’s going to pick up the garbage on Monday morning?”','Quote');
+tf(p,[668,M,684,GU-120],'Mierle Laderman Ukeles, Manifesto for Maintenance Art, 1969','Micro');
 done(p);
 
-// Q1 floor plates : sliver section left
-p=Q(0,'There is no typical floor because there is no typical task.',[
-  ['Program','Each plate holds one step of the loop (receiving, sorting, mixing, growing), sized for that task and its crew.'],
-  ['Mast','Every plate hangs from one mast on one footing, so the plates step out on alternate sides to balance it.'],
-  ['Strap','The Dyneema strap can’t turn a sharp corner, so every edge is a 7½" bullnose. The curve comes from the lashing.'],
-  ['Site','In plan, the masses fit the banks and reach between the bridge piers, leaving the channel open.'],
-  ['Network','What repeats from site to site is the assembly and the section, not the outline.']]);
-img(p,[80,M,1020,GU-80],'img/sliver_section.png');done(p);
-
-// Q2 peel : render left, full bleed
-p=Q(1,'The peel is where the building shows its work.',[
-  ['Seen','The veil opens where the public should see the work. From the path, the crew reads as silhouette.'],
-  ['Private','It closes and frosts where the crew needs privacy, as in the housing.'],
-  ['Reach','Where a plate pulls away from the one above, the crew has room to reach the strap and retension it.'],
-  ['Section','At the peel, the floor edge shows its layers: CLT, cork, earth, strap. The product is on display at every floor line.']]);
-img(p,[0,0,H,GU],'img/render_top.jpg','cover','50% 45%');
-done(p);
-
-// Q3 lost maintenance : timeline + unit chart, black line only
-p=Q(2,'At Devil’s Gate, fifteen years of it.',[
-  ['Devil’s Gate','Removal stopped in 1994. After the 2009 Station Fire, more than 1.3 million cubic yards came in: about three Rose Bowls, upstream of the Rose Bowl.'],
-  ['The County','14 reservoirs and 162 debris basins expect 67.5 million cubic yards between 2012 and 2032, with about 48 million cubic yards of space to put it.'],
-  ['Eaton, 2025','One storm sent about 480,000 cubic yards into 14 debris basins. The County dug out Eaton Wash on an emergency basis through May.']],
-  'Sources: LA County Public Works; LACFCD Sediment Management Strategic Plan 2012–2032; Zenodo, 2025');
+// 03 PROBLEM : the record at Devil's Gate, then the County's own numbers (black line only)
+p=page('Problem','Problem');
 tf(p,[140,M,156,GU-80],'Devil’s Gate   /   sediment removal','Micro');
 (function(){var d=tf(p,[170,M,320,GU-80],'15 years','Thesis');d.style.fontSize='120px';d.style.lineHeight='130px';d.style.letterSpacing='-.03em'})();
 tf(p,[310,M,326,GU-80],'1994–2009, no removal','Micro');
@@ -331,36 +215,123 @@ tf(p,[740,460,760,GU-80],'●  120 filled','Lede');
 tf(p,[776,460,820,GU-80],'48M yd³ of space at County placement sites, 2011','Micro');
 tf(p,[840,460,860,GU-80],'○  49 open','Lede');
 tf(p,[876,460,920,GU-80],'No place to put it, while the burned slopes need soil','Micro');
+col(p,[200,GU+80,cx(11)],[
+  ['Lede','Hidden maintenance doesn’t fail at once. It is deferred until it becomes a crisis.',48],
+  ['Micro','Invisible work has no constituency',8],
+  ['Body','Removal behind Devil’s Gate stopped in 1994, and nobody saw the reservoir fill. After the 2009 Station Fire, more than 1.3 million cubic yards came in, and a routine task became an emergency. The 2025 Eaton Fire repeated it in the next canyon.',32],
+  ['Micro','A broken cycle, not a shortage',8],
+  ['Body','The County expects 67.5 million cubic yards of sediment by 2032 and has about 48 million of space to put it. Meanwhile the burned slopes upstream lose their soil, and the concrete channel downstream is starved of it.',40],
+  ['Micro','Sources: LA County Public Works; LACFCD Sediment Management Strategic Plan 2012–2032; Zenodo, 2025',0]]);
 done(p);
 
-// Q4 labor : crew in the sliver section
-p=Q(3,'Because maintenance is labor. A machine yard behind a fence is exactly the hidden maintenance this project argues against.',[
-  ['Hand work','Testing, sorting ash and debris, composting, mixing earth, pressing tile, raising plants, retensioning straps.'],
-  ['Paid, skilled, permanent','A crew drawn from people in recovery, in reentry, or displaced by the Eaton Fire, housed on site in Mass 2.'],
-  ['Constituency','Ukeles shook every sanitation worker’s hand. The public walk passes the crew every day, and that is what makes the work hard to cut.'],
-  ['Not spectacle','The veil shows the work, not the workers: silhouettes, frosted where privacy matters, and the housing never on view.']]);
-img(p,[80,M,1020,GU-80],'img/sliver_crew.png');done(p);
+// ===== ACT 2 : THE CLAIM =====
 
-// Q5 permanence : what stays, what passes through
-p=Q(4,'It shouldn’t. The building is permanent because the sediment never stops coming. What’s temporary is everything that passes through it.',[
-  ['Permanence','A building can’t be quietly cancelled next fiscal year.'],
-  ['Temporary is the failure','Emergency dig-outs after Station in 2009 and Eaton in 2025, then nothing until the next fire.'],
-  ['A permanent place for temporary healing','Sediment leaves as soil, plants leave for the slopes, and crew members leave with a trade.']]);
-(function(){var o='<rect x="340" y="380" width="280" height="320" fill="none" stroke="'+K+'" stroke-width="2"/>';
-  o+=arrow(100,460,330,460)+arrow(100,620,330,620)+arrow(630,420,870,420)+arrow(630,540,870,540)+arrow(630,660,870,660);
-  svgAt(p,[0,0,H,GU],o);
-  tf(p,[500,340,540,620],'The node','Lede').style.textAlign='center';tf(p,[540,340,556,620],'Permanent','MicroC');
-  tf(p,[420,100,452,330],'Sediment\reach storm','Micro');tf(p,[556,100,604,330],'Crew\rin recovery, reentry,\ror displaced by fire','Micro');
-  tf(p,[380,640,412,880],'Soil\rto the slopes','Micro');tf(p,[500,640,532,880],'Plants\rto the burn scar','Micro');tf(p,[620,640,652,880],'Crew\rleaves with a trade','Micro');
-  tf(p,[300,100,316,880],'Passes through   /   temporary','Micro');})();
+// 04 THESIS + SYSTEM : loop as cut-out objects left, text right
+p=page('Thesis and system','Thesis');
+var ox=GU/2,oy=560,R=260;
+[['Sediment',-1,0],['Soil',0,1],['Plants',1,0],['Slopes',0,-1]].forEach(function(k){
+  var y=oy+k[1]*R,x=ox+k[2]*R;icon(p,[y-70,x-100,y+70,x+100],k[0]);
+  tf(p,[y+80,x-100,y+96,x+100],k[0],'MicroC')});
+(function(){var o='';for(var q=0;q<4;q++){var a0=(-90+q*90+32)*Math.PI/180,a1=(-90+q*90+58)*Math.PI/180,
+  x0=ox+R*Math.cos(a0),y0=oy+R*Math.sin(a0),x1=ox+R*Math.cos(a1),y1=oy+R*Math.sin(a1),tx=-Math.sin(a1),ty=Math.cos(a1),nx=-ty,ny=tx;
+  o+='<path d="M'+x0.toFixed(1)+' '+y0.toFixed(1)+' A'+R+' '+R+' 0 0 1 '+x1.toFixed(1)+' '+y1.toFixed(1)+'" fill="none" stroke="#141414" stroke-width="1"/>';
+  o+='<path d="M'+(x1-tx*10+nx*5).toFixed(1)+' '+(y1-ty*10+ny*5).toFixed(1)+'L'+x1.toFixed(1)+' '+y1.toFixed(1)+'L'+(x1-tx*10-nx*5).toFixed(1)+' '+(y1-ty*10-ny*5).toFixed(1)+'" fill="none" stroke="#141414" stroke-width="1"/>'}
+  svgAt(p,[0,0,H,GU],o)})();
+tf(p,[200,GU+80,420,W-M],'Maintenance that is hidden gets abandoned. A sediment node makes it public, permanent, and productive.','Thesis');
+tf(p,[500,GU+80,516,W-M],'Problem','Micro');
+tf(p,[528,GU+80,640,cx(11)],"Fire-loosened sediment from the San Gabriels is trapped at Devil's Gate Dam, removed each year, and trucked away as waste out of public view.",'Body');
+tf(p,[680,GU+80,696,W-M],'Proposal','Micro');
+tf(p,[708,GU+80,820,cx(11)],"A public station where the river's maintenance becomes visible, paid work, and that work rebuilds the land, the river, and the people who do it.",'Body');
+tf(p,[860,GU+80,876,W-M],'Sediment > soil > plants > slopes > less sediment','Micro');
 done(p);
 
-// Q6 sag : two states of one plate
-p=Q(5,'Because the building is a maintenance object. The sag is the gauge: from the river path, you can read when it needs care.',[
-  ['Creep','Dyneema slowly stretches under sustained load. Most designs hide that; this one uses it as a clock.'],
-  ['What sags','The CLT plate carries the floor. Only the hung cork-and-earth sandwich drops, and a hidden steel chain stops it.'],
-  ['The gauge','When the sag reaches the mark, the crew retensions at the pad-eye, in view of the path.'],
-  ['Stewart Brand','Buildings live through upkeep (How Buildings Learn, 1994). Here the upkeep is designed in.']]);
+// ===== ACT 3 : THE PLACE =====
+
+// 05 SITE : full-bleed plan, annotated
+p=page('Site analysis','Site');
+crop(p,[100,0,H,W],'img/site_plan.png','110% auto','50% 52%');
+tag(p,120,M,'Site plan   /   north up');
+(function(){var c=tf(p,[160,M,224,560],'Arroyo Seco Stables, South Pasadena. Lower Arroyo, downstream of Devil’s Gate Dam.','Body');c.style.background='#fff';c.style.padding='6px 8px'})();
+note(p,236,1420,'Upstream   /   Devil’s Gate Dam  ↗');
+note(p,300,640,'Bridge   /   the road looks down on the work',760,328);
+note(p,860,1260,'Three masses on the banks\nreaching over the channel',1150,760);
+done(p);
+
+// 06 OVERALL SECTION : the masses under the bridge, annotated
+p=page('Overall Section','Site');
+tf(p,[380,M,396,GU-40],'Overall Section   /   site condition','Micro');tf(p,[376,GU+40,396,W-M],'1/32" = 1\'-0"','Scale');
+img(p,[420,0,800,W],'img/overall_comp.png');
+note(p,446,1150,'Three masses hang beneath the bridge');
+note(p,456,120,'Bridge   /   the public looks down');
+note(p,742,1080,'Channel and riverbed left clear',1200,712);
+tf(p,[802,M,880,GU-120],'The three masses hang over the channel beneath the bridge, putting the river’s upkeep in view of the road, the path, and the bridge.','Body');done(p);
+
+// 07 BUILDING SECTION : one sliver on one footing, annotated
+p=page('Building Section','Building');tf(p,[360,M,376,GU-40],'Building Section','Micro');tf(p,[356,GU+40,376,W-M],'1/16" = 1\'-0"','Scale');
+img(p,[400,0,676,W],'img/building_section.png');
+note(p,730,1560,'One footing on the bank',1515,584);
+note(p,790,1180,'Riverbed left clear',1440,600);
+tf(p,[716,M,800,GU-120],'Set against the bridge’s arches, one sliver stands on the bank on a single footing, leaving the channel and the riverbed clear.','Body');done(p);
+
+// ===== ACT 4 : THE BUILDING =====
+
+// 08 SLIVER DRAWING : annotated with leaders from the left half
+p=page('Sliver Drawing','Sliver');
+tf(p,[880,M,896,GU-80],'Sliver Drawing','Micro');tf(p,[904,M,922,GU-80],'Not to scale','Scale');tf(p,[940,M,1020,GU-120],'One sliver holds the whole loop: sediment is hoisted in, worked into soil, and grown into plants, with the crew visible on every floor.','Body','vb');
+img(p,[80,GU+80,1020,W-M],'img/sliver_section.png');
+[[240,'Crew on every floor\rpaid, skilled, housed on site',1385,255],
+ [340,'Hopper\rsediment is hoisted in',1311,362],
+ [420,'Floor edge\rrounded to the strap’s radius',1566,443],
+ [500,'Hoist\rbuckets on pulleys',1379,466],
+ [580,'Plates step out on alternate sides\rto balance one mast',1553,594],
+ [680,'One mast, one footing\rthe channel stays clear',1426,691]].forEach(function(a){
+  tf(p,[a[0],M,a[0]+32,GU-80],a[1],'MicroR');lead(p,GU-72,a[0]+8,a[2],a[3])});
+done(p);
+
+// 09 SLIVER RENDER : left bleed, right inset
+p=page('Sliver Render','Sliver',{noLeft:true});
+img(p,[0,0,H,GU],'img/render.jpg','cover','50% 40%');
+tag(p,40,M,COORD);
+tf(p,[760,GU+80,776,W-M],'Sliver Render','Micro');tf(p,[784,GU+80,802,W-M],'Perspective from the river path','Scale');
+tf(p,[830,GU+80,920,cx(11)],'From the river path, the sliver rises beside the bridge on a single red mast, and the veil turns the work on each floor into silhouette.','Body');done(p);
+
+// 10 ENVELOPE : the peel, annotated on the aerial render
+p=page('Envelope','Envelope',{noLeft:true});
+img(p,[0,0,H,GU],'img/render_top.jpg','cover','50% 45%');
+tag(p,40,M,COORD);
+note(p,620,40,'Peeled open\nthe work faces the path',110,450);
+note(p,196,300,'Closed, frosted\nprivacy where the crew needs it',250,350);
+note(p,700,420,'Plates pull apart\nroom to reach the straps',450,560);
+note(p,1000,660,'River path',600,975);
+tf(p,[760,GU+80,776,W-M],'Envelope   /   the peel','Micro');tf(p,[784,GU+80,802,W-M],'Aerial render','Scale');
+tf(p,[830,GU+80,940,cx(11)],'The peel is where the building shows its work: open where the public should see it, closed where the crew needs privacy, and parted where the crew reaches the straps.','Body');done(p);
+
+// 11 DETAIL : the joint, fasteners sorted by how often they need care
+p=page('Detail Drawing','Joint');
+tf(p,[880,M,896,GU-80],'Section Detail','Micro');tf(p,[904,M,922,GU-80],'1" = 1\'-0"','Scale');tf(p,[940,M,1020,GU-120],'The floor is a lashed sandwich: CLT plate, compressed cork, and tile hung below, bound at the bullnose edge by a Dyneema strap the crew can reach and retension.','Body','vb');
+img(p,[90,M,850,W-M],'img/detail.png');
+[[231,'Seasonal'],[264,'Seasonal'],[401,'Seasonal'],[421,'Permanent'],[460,'Continuous'],[481,'Rarely'],[501,'Continuous']].forEach(function(r){tf(p,[r[0],1600,r[0]+16,W-M],r[1],'Micro')});
+[[315,'Permanent'],[444,'Rarely']].forEach(function(r){tf(p,[r[0],150,r[0]+16,326],r[1],'MicroR')});
+svgAt(p,[0,0,H,W],'<circle cx="880" cy="480" r="22" fill="none" stroke="'+K+'" stroke-width="1.4" stroke-dasharray="4 3"/>');
+note(p,600,740,'Retension point\nthe crew reaches the strap here',870,498);
+tf(p,[940,GU+40,1010,W-M],'Fastening sorted by how often a part needs care: what stays forever is concealed; what the crew maintains is exposed and undone by hand.','Micro');
+done(p);
+
+// 12 ASSEMBLIES : floor plate exploded left, wall sandwich exploded right
+p=page('Assemblies','Assemblies');
+tf(p,[140,160,156,GU-80],'Floor plate   /   top to bottom','Micro');
+[[220,300,'CLT\rcarries the floor','clt'],[340,380,'Cork\ra spring that keeps the strap tight','cork'],[420,500,'Sediment earth tiles\rthe node’s product, ceiling below','earth'],[540,552,'Dyneema binding\rretensioned by hand','dyneema'],[590,602,'Steel stop chain\rhidden fail-safe','chain']].forEach(function(l){
+  hatch(p,[l[0],160,l[1],720],l[3]);var c=(l[0]+l[1])/2;tf(p,[c-16,750,c+16,940],l[2],'Micro','vc')});
+tf(p,[700,160,860,840],'The floor is made of what the node processes. The Dyneema creeps, the earth layer sags, and the crew retensions it: maintenance performed in public view.','Body');
+tf(p,[140,GU+80,156,W-M],'Wall   /   outside to inside','Micro');
+[[1040,1100,'Skin\rCLT or ply','ply'],[1160,1340,'Cork core\rinsulation, damping','cork'],[1400,1460,'Skin\rCLT or ply','ply'],[1540,1700,'Spacer frame\redges, openings','timber']].forEach(function(l){
+  hatch(p,[220,l[0],600,l[1]],l[3]);tf(p,[624,l[0],660,l[0]+190],l[2],'Micro')});
+tf(p,[700,GU+80,860,cx(11)],'Two thin skins held apart act like an I-beam: stiffness from depth, not mass. The cork core gives continuous insulation and acoustic damping.','Body');
+tf(p,[980,160,996,GU-80],'Exploded in section   /   hatched by material','Micro');
+done(p);
+
+// 13 SAG : two states of one plate
+p=page('Sag','Demonstration');
 (function(){var X0=140,X1=700,o=PAT,mid=(X0+X1)/2;
   function state(y,s){hatch(p,[y,X0,y+48,X1],'clt');
     var t=y+52,b=y+104,tt=y+118;
@@ -375,50 +346,18 @@ p=Q(5,'Because the building is a maintenance object. The sag is the gauge: from 
   tf(p,[170,X0,186,GU-80],'01   /   retensioned','Micro');tf(p,[550,X0,566,GU-80],'02   /   sagged to the mark: the crew retensions','Micro');
   [[220,'CLT plate\rcarries the floor'],[278,'Cork + earth tile\rhung sandwich'],[346,'Pad-eye\rcrew retensions here']].forEach(function(l){tf(p,[l[0],X1+40,l[0]+32,GU-20],l[1],'Micro')});
   tf(p,[746,X1+40,762,GU-20],'Sag mark','Micro');tf(p,[658,mid-200,674,mid-12],'Stop chain','MicroR');
-  tf(p,[880,X0,920,GU-80],'Diagram. The retension point still needs to be drawn into the section detail.','Micro')})();
+  tf(p,[880,X0,896,GU-80],'Diagram   /   not to scale','Micro')})();
+col(p,[200,GU+80,cx(11)],[
+  ['Lede','The building is a maintenance object.',32],
+  ['Body','The Dyneema creeps and the earth layer sags until it reaches the mark. Then the crew retensions it, in view of the path. The sag is the gauge: anyone can read when the building needs care.',32],
+  ['Micro','What sags',8],
+  ['Body','Only the hung cork-and-earth sandwich. The CLT plate carries the floor, and a hidden steel chain stops the drop.',32],
+  ['Micro','Stewart Brand, How Buildings Learn, 1994',8],
+  ['Body','Buildings live through upkeep. Here the upkeep is designed in, not deferred.',0]]);
 done(p);
 
-// Q7 cork : the beads, from the detail
-p=Q(6,'Cork compresses and springs back. It keeps the strap tight while the strap creeps.',[
-  ['Spring','Preloaded in the sandwich, so as the strap stretches the cork pushes back, slowing and evening out the sag.'],
-  ['Quiet','Tamping, shovels and wheelbarrows on the workshop floors don’t carry to the floor below.'],
-  ['River-proof','It insulates, resists rot, and needs no glue: expanded cork is bound by its own resin.'],
-  ['A harvest','Stripped from living cork oaks about every nine years without felling them. The material is itself a maintenance cycle.']]);
-img(p,[200,M,560,GU-80],'img/detail_cork.png');
-tf(p,[580,M,596,GU-80],'Expanded cork bead 6¼"   /   sandwiched, slightly compressed','Micro');
-hatch(p,[680,M,900,GU-80],'cork');tf(p,[916,M,932,GU-80],'Cork   /   hatch','Micro');
-done(p);
-
-// Q8 strap
-p=Q(7,'Because a strap can be tightened by hand, in public.',[
-  ['Hand-tensioned','Retensioned at a pad-eye with simple tools: no crane, no welding.'],
-  ['Strength for weight','One of the strongest fibres by weight. One person can carry a coil.'],
-  ['No rust','Over a wet channel, steel cable needs coatings. Dyneema doesn’t corrode.'],
-  ['Honest wear','Sunlight slowly weakens it, so straps are replaced on a cycle: another visible task.'],
-  ['Same logic','The hoist lines in the sliver, buckets on pulleys, are rope work anyone can read at a glance.']]);
-img(p,[160,M,700,GU-80],'img/detail_strap.png');
-tf(p,[720,M,736,GU-80],'Bullnose edge band   /   Dyneema lashing strap   /   SS pad-eye','Micro');
-hatch(p,[800,M,830,GU-80],'dyneema');tf(p,[846,M,862,GU-80],'Dyneema   /   hatch','Micro');
-done(p);
-
-// Q9 fastening : the whole detail, sorted by interval
-p=Q(8,'Fastening is sorted by how often a part needs care. What stays forever is hidden. What the crew maintains is exposed and undone by hand.',[
-  ['Permanent   /   concealed','Knife plate and dowels at the outrigger. Through-bolted U-channel shoe on a neoprene pad at the wall.'],
-  ['Rarely   /   partly seen','Lagged steel T-hangers and edge brackets carry the tile.'],
-  ['Seasonal   /   exposed','Stainless J-hook clips let one shingle swap out. Wedged tenons are knocked tight by hand.'],
-  ['Continuous   /   exposed','The Dyneema strap at its stainless pad-eye.']]);
-img(p,[200,M,860,GU-40],'img/detail.png');
-tf(p,[880,M,896,GU-80],'Section detail   /   1" = 1\'-0"','Micro');
-done(p);
-
-// Q10 rammed earth : a wall in lifts
-p=Q(9,'Because it’s the sediment itself. Rammed into walls, waste becomes structure with almost nothing added, and every lift records a storm.',[
-  ['01   Test','Every load goes to the lab first for ash, lead and asbestos. Anything that fails leaves the cycle.'],
-  ['02   Screen','Boulders go to gabions, organics to compost.'],
-  ['03   Blend','About 50–70% sand and gravel, 15–30% silt, 10–20% clay.'],
-  ['04   Moisten','To about 8–12%: a squeezed ball holds, a dropped ball shatters.'],
-  ['05   Ram','6–8" loose lifts in reusable forms, each compacted to half its height.'],
-  ['06   Cure','Forms off at once. Weeks to cure, under a roof overhang on a raised base.']]);
+// 14 MATERIAL : how sediment becomes building, a wall in lifts
+p=page('Material','Material');
 (function(){var X0=300,X1=600,T=200,B=840,n=8,lh=(B-T)/n,o='',seed=31;
   function r(){seed=(seed*16807)%2147483647;return seed/2147483647}
   for(var i=0;i<n;i++){var y0=T+i*lh,dn=260+Math.round(r()*420);
@@ -436,7 +375,42 @@ p=Q(9,'Because it’s the sediment itself. Rammed into walls, waste becomes stru
   tf(p,[T+lh*4+4,X1+30,T+lh*4+36,GU-40],'Each lift\rone storm’s sediment','Micro');
   tf(p,[B+12,X1+50,B+44,GU-40],'Raised base\rkeeps water off','Micro');
   tf(p,[T-70,X1+60,T-38,GU-40],'Roof overhang','Micro');
-  tf(p,[960,M,976,GU-80],'Diagram   /   unstabilized earth stays reversible: it can return to soil','Micro')})();
+  tf(p,[960,M,976,GU-80],'Rammed earth wall in section   /   diagram','Micro')})();
+col(p,[200,GU+80,cx(11)],[
+  ['Lede','The building is made of what the node processes. Every lift records a storm.',36],
+  ['Micro','01   Test',4],['Body','Every load goes to the lab first for ash, lead and asbestos. Anything that fails leaves the cycle.',18],
+  ['Micro','02   Screen',4],['Body','Boulders go to gabions, organics to compost.',18],
+  ['Micro','03   Blend',4],['Body','About 50–70% sand and gravel, 15–30% silt, 10–20% clay.',18],
+  ['Micro','04   Moisten',4],['Body','To about 8–12%: a squeezed ball holds, a dropped ball shatters.',18],
+  ['Micro','05   Ram or press',4],['Body','Rammed in 6–8" lifts for walls; pressed from the same mix for the floor tiles.',18],
+  ['Micro','06   Cure',4],['Body','Weeks under a roof overhang, on a raised base. Left unstabilized, it can return to soil.',0]]);
+done(p);
+
+// 15 MODEL PHOTOS : left bleed, right inset + small
+p=page('Model photographs','Model',{noLeft:true});
+img(p,[0,0,H,GU],'img/_BIL4057.jpg','cover','50% 50%');
+tag(p,40,M,COORD);
+img(p,[160,GU+80,667,GU+460],'img/_BIL4060.jpg','cover');img(p,[160,W-M-380,667,W-M],'img/_BIL4072.jpg','cover');tf(p,[687,GU+80,703,GU+460],'02  /  Floor plates + mast','Micro');tf(p,[687,W-M-380,703,W-M],'03  /  Mast + veil','Micro');
+tf(p,[780,GU+80,796,W-M],'Model Photographs   /   01  Walls + veil','Micro');tf(p,[804,GU+80,822,W-M],'Three views','Scale');tf(p,[850,GU+80,940,cx(11)],'Ply walls, layered floor plates, and a clear printed veil: the model tests how the work reads as silhouette through the skin.','Body');
+done(p);
+
+// ===== ACT 5 : WHY ARCHITECTURE =====
+
+// 16 CLOSE : what stays and what passes through; the three properties
+p=page('Why architecture','Why architecture');
+(function(){var o='<rect x="340" y="380" width="280" height="320" fill="none" stroke="'+K+'" stroke-width="2"/>';
+  o+=arrow(100,460,330,460)+arrow(100,620,330,620)+arrow(630,420,870,420)+arrow(630,540,870,540)+arrow(630,660,870,660);
+  svgAt(p,[0,0,H,GU],o);
+  tf(p,[500,340,540,620],'The node','Lede').style.textAlign='center';tf(p,[540,340,556,620],'Permanent','MicroC');
+  tf(p,[420,100,452,330],'Sediment\reach storm','Micro');tf(p,[556,100,604,330],'Crew\rin recovery, reentry,\ror displaced by fire','Micro');
+  tf(p,[380,640,412,880],'Soil\rto the slopes','Micro');tf(p,[500,640,532,880],'Plants\rto the burn scar','Micro');tf(p,[620,640,652,880],'Crew\rleaves with a trade','Micro');
+  tf(p,[300,100,316,880],'A permanent place for temporary healing','Micro')})();
+col(p,[200,GU+80,cx(11)],[
+  ['Thesis','A policy can mandate maintenance. Only architecture can make it visible.',40],
+  ['Micro','Permanence',8],['Body','A building commits to the work. It can’t be quietly cancelled next fiscal year.',24],
+  ['Micro','Publicness',8],['Body','The elevated walk moves the public through the operation, and the veil stages the work as silhouette.',24],
+  ['Micro','Demonstration',8],['Body','The floors are made of the sediment, and their binding sags until the crew retensions it.',24],
+  ['Micro','Network',8],['Body','One node is a prototype for every reservoir and debris basin from the San Gabriels to the coast.',0]]);
 done(p);
 
 function fit(){slides.forEach(function(w){var k=w.clientWidth/W;w.style.height=(H*k)+'px';w.firstChild.style.transform='scale('+k+')'})}

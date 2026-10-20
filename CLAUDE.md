@@ -16,19 +16,26 @@ The argument behind the project is in `THESIS.md`. Read it before writing any sl
   - `trim.swift`: rasterizes a PDF page and crops away the white margins.
   - `comp.swift`: makes a vector composite of the building section into the overall section.
 
-## Current deck (12 slides + 11 question slides)
+## Current deck (16 slides, one argument)
 
-01 Title · 02 Provocation (Ukeles quote) · 03 Site plan (`materials/PLAN.pdf`) · 04 Thesis + sediment loop · 05 Powers of Ten (crops of joint, sliver, building, site) · 06 Section detail · 07 Assemblies (floor plate / wall) · 08 Sliver section drawing · 09 Sliver render (full bleed) · 10 Building section · 11 Overall section with the full building composited in · 12 Model photographs.
+The deck is ordered as an argument, in five parts; `SCRIPT.md` is the spoken script that goes with it.
+1. **Problem:** 01 Title · 02 Provocation (Ukeles quote) · 03 Problem: Devil's Gate timeline and the County's Rose Bowl dot chart (sourced).
+2. **Claim:** 04 Thesis + sediment loop.
+3. **Place:** 05 Site plan, annotated (upstream, bridge, masses) · 06 Overall section, annotated · 07 Building section, annotated.
+4. **Building:** 08 Sliver section, annotated with leaders (crew, hopper, edge, hoist, plates, mast) · 09 Sliver render · 10 Envelope: the peel, annotated on `img/render_top.jpg` (from `prez_render.jpg`) · 11 Section detail, with each fastener tagged permanent / rarely / seasonal / continuous and the retension point circled · 12 Assemblies (floor labels say why each layer is there) · 13 Sag: two-state diagram · 14 Material: rammed-earth lifts + six steps from load to wall · 15 Model photographs.
+5. **Why architecture:** 16 Permanence / publicness / demonstration, network, plus the "permanent place for temporary healing" diagram.
 
-Questions appendix (backup slides for the final review, built by the `QUESTIONS` block near the end of `deck.html`): 13 Index · 14 Floor plates · 15 Peel (`img/render_top.jpg`, from `prez_render.jpg`) · 16 Lost maintenance (timeline + Rose Bowl unit chart, sourced) · 17 Labor (`img/sliver_crew.png`) · 18 Permanence · 19 Sag (two-state diagram) · 20 Cork (`img/detail_cork.png`) · 21 Strap (`img/detail_strap.png`) · 22 Fastening · 23 Rammed earth (lift diagram). Their text was drafted by Claude from `FINAL_QA.md` and needs Brandon's review. `ASSN_Deck_Updated.pdf` is still the 12-slide Mac export; rebuild on the Mac to include the appendix with the right fonts (Linux substitutes Helvetica Neue and IBM Plex Mono).
+Powers of Ten was dropped because the deck now zooms from site down to joint in order. The annotation helpers (`note`, `lead`, `col`) are at the top of the slide section in `deck.html`. Annotation and new-slide text was drafted by Claude from THESIS.md and `FINAL_QA.md`, and needs Brandon's review. `ASSN_Deck_Updated.pdf` is still the old 12-slide Mac export: rebuild on the Mac for the right fonts (Linux substitutes Helvetica Neue and IBM Plex Mono).
 
-How slide 11 was made: `deck/img/overall_comp.pdf` places `BUILDING_SECTION.pdf` over `OVERALL_SECTION.pdf` with a multiply blend, scale 1.00407, offset (-1739.9, -28.98) pt. The alignment was taken from the bridge lamp posts and deck lines. The original single sliver was erased (x 2576-2782, y 688-957, measured top-down in overall-page points).
+How slide 06 was made: `deck/img/overall_comp.pdf` places `BUILDING_SECTION.pdf` over `OVERALL_SECTION.pdf` with a multiply blend, scale 1.00407, offset (-1739.9, -28.98) pt. The alignment was taken from the bridge lamp posts and deck lines. The original single sliver was erased (x 2576-2782, y 688-957, measured top-down in overall-page points).
 
 ## Known issues to raise with Brandon
 
-- The detail drawing labels the tile "FIRED CLAY TILE", but slide 07 and the thesis say sediment earth tiles.
-- The detail does not show where the crew retensions the Dyneema strap.
+- The detail drawing labels the tile "FIRED CLAY TILE", but slide 12 and the thesis say sediment earth tiles. One fix: tile pressed from the node's own clay and low-fired.
+- The detail does not draw where the crew retensions the Dyneema strap. Slide 11 only circles the pad-eye; slides 11 and 13 and the script depend on it.
 - The building section linework is light grey, so it reads faintly when projected.
-- `materials/RENDER/prez_render.jpg` was added after the deck was built and is not used yet.
-- The thesis is not yet shown anywhere in the deck: the four moves (Devil's Gate 1994-2009, the Eaton Fire in 2025), labor and the crew, why architecture rather than policy (permanence, publicness, demonstration), the elevated public walk, the stables program, crew housing, the testing lab, the network argument, the four vulnerabilities, and the texts to cite.
-- Slide 06's caption was written by Claude. All other captions come from the print set.
+- Thesis content now in the deck and script: the Devil's Gate and Eaton record, labor and the crew, permanence / publicness / demonstration, network, contamination. Still not drawn: the elevated public walk, the stables program, crew housing, the testing lab. Not yet cited: Mattern, Jackson, Russell and Vinsel.
+- Slide 11's caption (the detail) was written by Claude. The other drawing captions come from the print set.
+- The title slide now says "Final Review" with no date; add the date.
+- The upstream arrow on the site plan assumes the channel runs upstream to the upper right (northeast). Check it.
+- Rammed earth (slide 14) is not yet labelled in the drawings.
