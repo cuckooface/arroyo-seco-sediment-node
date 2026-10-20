@@ -18,25 +18,30 @@ The argument behind the project is in `THESIS.md`. Read it before writing any sl
 
 ## Current deck (15 slides, one argument)
 
-The deck is ordered as an argument, in six parts; `SCRIPT.md` is the spoken script that goes with it. Brandon asked for materiality to come early, straight after the thesis, and for the envelope slide to carry no annotations.
-1. **Problem:** 01 Title · 02 Provocation (Ukeles quote) · 03 Problem: Devil's Gate timeline and the County's Rose Bowl dot chart (sourced).
-2. **Claim:** 04 Thesis + sediment loop.
-3. **Material:** 05 Material: rammed-earth lifts + six steps from load to wall · 06 Assemblies (floor labels say why each layer is there) · 07 Section detail, with each fastener tagged permanent / rarely / seasonal / continuous and the retension point circled · 08 Sag: two-state diagram.
-4. **Place:** 09 Site plan, annotated (upstream, bridge, masses) · 10 Overall section, annotated.
-5. **Building:** 11 Sliver section, annotated with leaders (crew, hopper, edge, hoist, plates, mast) · 12 Sliver render · 13 Envelope: `img/render_top.jpg` (from `prez_render.jpg`), unannotated · 14 Model photographs.
-6. **Why architecture:** 15 Permanence / publicness / demonstration, network, plus the "permanent place for temporary healing" diagram.
+The deck is ordered as an argument; `SCRIPT.md` is the spoken script that goes with it. Brandon's requests so far:
+- materiality straight after the thesis
+- no labels on the detail, the sliver section or the envelope
+- the 2025 LA fire and its debris flows next to Devil's Gate
+- no separate closing slide: the "why architecture" close is spoken over the model slide
+
+The order:
+1. **Problem:** 01 Title · 02 Provocation (Ukeles quote) · 03 Devil's Gate: timeline and the County's Rose Bowl dot chart · 04 The 2025 Eaton Fire: 14,021 acres; the Feb 13 storm's debris flows (Sierra Madre, Altadena, Palisades); 480,000 yd³ in one storm; the 1934 La Crescenta precedent.
+2. **Claim:** 05 Thesis + sediment loop.
+3. **Material:** 06 Material: rammed-earth lifts + six steps from load to wall · 07 Assemblies (floor labels say why each layer is there) · 08 Section detail, no labels · 09 Sag: two-state diagram.
+4. **Place:** 10 Site plan, annotated (upstream, bridge, masses) · 11 Overall section, annotated.
+5. **Building:** 12 Sliver section, no labels · 13 Sliver render · 14 Envelope: `img/render_top.jpg`, no labels · 15 Model photographs.
 
 The building section slide was removed at Brandon's request. Its image is still in `deck/img/building_section.png`.
 Powers of Ten was dropped because the deck now zooms from site down to joint in order. The annotation helpers (`note`, `lead`, `col`) are at the top of the slide section in `deck.html`. Annotation and new-slide text was drafted by Claude from THESIS.md and `FINAL_QA.md`, and needs Brandon's review. `ASSN_Deck_Updated.pdf` is still the old 12-slide Mac export: rebuild on the Mac for the right fonts (Linux substitutes Helvetica Neue and IBM Plex Mono).
 
-How slide 10 was made: `deck/img/overall_comp.pdf` places `BUILDING_SECTION.pdf` over `OVERALL_SECTION.pdf` with a multiply blend, scale 1.00407, offset (-1739.9, -28.98) pt. The alignment was taken from the bridge lamp posts and deck lines. The original single sliver was erased (x 2576-2782, y 688-957, measured top-down in overall-page points).
+How slide 11 was made: `deck/img/overall_comp.pdf` places `BUILDING_SECTION.pdf` over `OVERALL_SECTION.pdf` with a multiply blend, scale 1.00407, offset (-1739.9, -28.98) pt. The alignment was taken from the bridge lamp posts and deck lines. The original single sliver was erased (x 2576-2782, y 688-957, measured top-down in overall-page points).
 
 ## Known issues to raise with Brandon
 
-- The detail drawing labels the tile "FIRED CLAY TILE", but slide 06 and the thesis say sediment earth tiles. One fix: tile pressed from the node's own clay and low-fired.
-- The detail does not draw where the crew retensions the Dyneema strap. Slide 07 only circles the pad-eye; slides 07 and 08 and the script depend on it.
-- Thesis content now in the deck and script: the Devil's Gate and Eaton record, labor and the crew, permanence / publicness / demonstration, network, contamination. Still not drawn: the elevated public walk, the stables program, crew housing, the testing lab. Not yet cited: Mattern, Jackson, Russell and Vinsel.
-- Slide 07's caption (the detail) was written by Claude. The other drawing captions come from the print set.
+- The detail drawing labels the tile "FIRED CLAY TILE", but slide 07 and the thesis say sediment earth tiles. One fix: tile pressed from the node's own clay and low-fired.
+- The detail does not draw where the crew retensions the Dyneema strap. The script points to the pad-eye on slide 08 and relies on it there and on slide 09.
+- Thesis content now in the deck and script: the Devil's Gate and Eaton record, labor and the crew, contamination; permanence / publicness / demonstration and the network are spoken only (slide 15). Still not drawn: the elevated public walk, the stables program, crew housing, the testing lab. Not yet cited: Mattern, Jackson, Russell and Vinsel.
+- Slide 08's caption (the detail) was written by Claude. The other drawing captions come from the print set.
 - The title slide now says "Final Review" with no date; add the date.
 - The upstream arrow on the site plan assumes the channel runs upstream to the upper right (northeast). Check it.
-- Rammed earth (slide 05) is not yet labelled in the drawings.
+- Rammed earth (slide 06) is not yet labelled in the drawings.
