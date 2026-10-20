@@ -1,15 +1,16 @@
 # Arroyo Seco Sediment Node: presentation script
 
-For the 16-slide deck in `deck/deck.html`. About 15 minutes at a steady pace (roughly 1,900 words). Times are running totals.
+For the 15-slide deck in `deck/deck.html`. About 13½ minutes at a steady pace, with slack to reach 15. Times are running totals.
 
-The argument has five parts:
+The argument has six parts:
 1. **The problem:** hidden maintenance fails.
 2. **The claim:** make it public, permanent and productive.
-3. **The place:** why here.
-4. **The building:** how the architecture does it.
-5. **Why architecture:** what only a building can do.
+3. **The material:** sediment becomes the building, and the building needs care.
+4. **The place:** why here.
+5. **The building:** how the work is staged in public.
+6. **Why architecture:** what only a building can do.
 
-Every slide answers one question and sets up the next. The *If asked* notes are short answers to likely questions. Full answers and sources are in `FINAL_QA.md`.
+Material comes straight after the thesis, because "productive" is the first thing to prove: the waste becomes the building. Every slide answers one question and sets up the next. The *If asked* notes are short answers to likely questions. Full answers and sources are in `FINAL_QA.md`.
 
 ---
 
@@ -49,80 +50,27 @@ So my thesis is this: **maintenance that is hidden gets abandoned. A sediment no
 
 Productive means closing the loop on the left. Sediment becomes soil, soil grows plants, plants go back to the burned slopes, and restored slopes send less sediment down. The waste stream becomes the supply chain for recovery.
 
-Public and permanent are what the architecture has to deliver. The rest of this presentation is how.
+And it goes one step further: the sediment becomes the building itself. So I'll start with the material.
 
-## Part 3: The place
+## Part 3: The material
 
-### 05 Site (3:00)
+### 05 Material (3:00)
 
-The site is the Arroyo Seco Stables, on the Lower Arroyo. Devil's Gate is upstream. Sediment from those mountains comes past here.
+This is how sediment becomes building. Every lift in this wall records a storm.
+1. Every load goes to the testing lab first: ash, lead, asbestos. Anything that fails leaves the cycle. That's why testing is the core of the program.
+2. Boulders are screened out for gabions; organics go to compost.
+3. The rest is blended to the right mix of sand, silt and clay.
+4. It's brought to the right moisture: a squeezed ball holds, a dropped ball shatters.
+5. It's rammed into walls in six-to-eight-inch lifts, or pressed into floor tiles from the same mix.
+6. It cures under a roof, on a raised base.
 
-I chose it because it already has an audience. There's a bridge overhead, a public path along the river, and the stables, which already bring people here. I'm not inventing a public; I'm putting the work in front of one that already exists. The stables stay as part of the program, so the node grows out of a community use instead of replacing it.
+Why rammed earth? Because it's the sediment itself. A debris flow is already a mix of rock, sand, silt and clay. Ramming it turns waste into structure with almost nothing added. And left unstabilized, it can always go back to soil.
 
-The building is three masses. They sit on the banks and reach over the channel.
+> *If asked about contamination:* This is the strongest objection. Fire sediment carries ash from burned homes: asbestos, lead, plastics. My answer is that testing isn't a side function; it's the program's core. Contamination is exactly why this work needs a permanent, accountable public facility instead of a truck to a landfill.
 
-### 06 Overall section (3:45)
+### 06 Assemblies (4:15)
 
-In section, the three masses hang beneath the bridge. Look at what's around them: the road on the bridge, the path along the river, the bridge itself. Everyone passing has a view of the work.
-
-And the channel stays clear. The node doesn't block the river; it puts the river's upkeep where people can see it.
-
-> *If asked about the program of each mass:* Mass 1 does receiving, testing, sorting, compost, the earth workshop and the stables. Mass 2 is over the channel: nursery, the gathering hub and crew housing. Mass 3, across the channel, is the treatment wetland and the release weir. An elevated public walk ties them together.
-
-### 07 Building section (4:15)
-
-Closer in, against the bridge's arches, each sliver stands on the bank on a single footing. That's a deliberate constraint: one footing on the bank, so the riverbed stays untouched.
-
-## Part 4: The building
-
-### 08 Sliver section (4:45)
-
-This is one sliver, and it holds the whole loop. I'll read it top to bottom.
-
-Sediment is hoisted into the hopper. The hoist is buckets on pulleys: rope work anyone can understand at a glance. Then it's worked into soil and grown into plants.
-
-Why does every floor have its own shape? Because there's no typical floor when there's no typical task. Each plate holds one step of the loop, sized for that task and the crew doing it. And every plate hangs off one mast on one footing, so the plates step out on alternating sides to balance it.
-
-The rounded edges aren't a style choice. They come from the strap that binds the floor, which I'll show in a moment. A strap can't turn a sharp corner.
-
-And there are people on every floor. That's the point. Maintenance is labor. The crew is paid, skilled and permanent, with housing on site. They're drawn from people in recovery, in reentry, or displaced by the Eaton Fire. A recovering hillside and a recovering person need the same things: time, material and steady attention. The node gives the crew all three.
-
-> *If asked, "Why people, not machines?":* A machine yard behind a fence is exactly the hidden maintenance this project argues against. And the work really is hand work: testing, sorting out ash and debris, composting, mixing earth, pressing tile, raising plants and retensioning straps.
-
-> *If asked, "Unique shapes don't repeat. What about the network?":* What repeats from site to site is the assembly and the section (mast, sandwich, strap, veil), not the outline. The outline adapts to each bank.
-
-### 09 Sliver render (6:15)
-
-This is what you see from the river path: the sliver rises beside the bridge on a single red mast. The veil turns the work on each floor into silhouette. You don't see faces; you see work happening.
-
-### 10 Envelope (6:45)
-
-From above, you can see how the envelope works. The peel is where the building shows its work.
-
-Where the public should see the work, the veil peels open toward the path. Where the crew needs privacy, as in the housing, it closes and frosts. And where the floor plates pull apart, the crew has room to reach the straps.
-
-So every peel is doing one of three jobs: showing the work, protecting privacy, or giving access.
-
-> *If asked, "Isn't this putting workers on display?":* The visibility is accountability for the work, not display of the workers. Silhouettes, frosted where privacy matters, and the housing is never on view.
-
-### 11 Detail (7:30)
-
-Now the joint, where the argument becomes physical.
-
-The floor is a lashed sandwich: a CLT plate on top, beads of compressed cork, and earth tile hung below as the ceiling. A Dyneema strap binds it at the rounded edge.
-
-The fastening is sorted by how often each part needs care. You can read it in the right-hand column.
-- **Permanent** connections are concealed: the knife plate and dowels, and the bolted shoe at the wall.
-- **Seasonal** parts are exposed: J-hook clips let you swap one shingle at a time, and the wedged tenons are knocked tight by hand.
-- **Continuous** care is the strap itself, at its pad-eye.
-
-That circle is the retension point. It's where the crew reaches the strap.
-
-> *If asked, "Why Dyneema?":* It can be tightened by hand: no crane, no welding, the right scale for a crew. It's very strong for its weight, it doesn't rust over a wet channel, and it creeps, which I'm using on purpose.
-
-### 12 Assemblies (8:30)
-
-Exploded, the floor reads top to bottom.
+The same material makes the floors. Exploded, the floor reads top to bottom.
 - The **CLT** carries the floor.
 - The **cork** is a spring. It's slightly compressed, so as the strap stretches, the cork pushes back and keeps it tight. It also stops the noise of tamping and shovels from reaching the floor below, and it resists rot by the river. Cork is stripped from living trees about every nine years without cutting them down, so the material is itself a maintenance cycle.
 - The **earth tiles** are the node's own product.
@@ -131,39 +79,88 @@ Exploded, the floor reads top to bottom.
 
 The floor is made of what the node processes.
 
-### 13 Sag (9:30)
+### 07 Detail (5:15)
 
-Here's why the tectonics sag. The building is a maintenance object.
+Here is that floor at the joint, where the argument becomes physical. A Dyneema strap binds the sandwich at a rounded edge. The edge is rounded because a strap can't turn a sharp corner.
 
-The Dyneema slowly stretches under load. Most buildings hide that; this one uses it as a clock. On top is the floor freshly retensioned. Below, the sandwich has sagged to the mark. When it reaches the mark, the crew retensions it, in view of the path.
+Why a strap? It can be tightened by hand: no crane, no welding, the right scale for a crew. It's very strong for its weight, and it doesn't rust over a wet channel.
 
-The sag is a gauge anyone can read. You can tell from the river path when the building needs care.
+The fastening is sorted by how often each part needs care. You can read it in the right-hand column.
+- **Permanent** connections are concealed: the knife plate and dowels, and the bolted shoe at the wall.
+- **Seasonal** parts are exposed: J-hook clips let you swap one shingle at a time, and the wedged tenons are knocked tight by hand.
+- **Continuous** care is the strap itself, at its pad-eye.
+
+That circle is the retension point. It's where the crew reaches the strap.
+
+### 08 Sag (6:15)
+
+And here is why the tectonics sag. The building is a maintenance object.
+
+The Dyneema slowly stretches under load. Most buildings hide that; this one uses it as a clock. On top is the floor freshly retensioned. Below, the sandwich has sagged to the mark. When it reaches the mark, the crew retensions it, in view of everyone passing.
+
+The sag is a gauge anyone can read. You can tell from the river when the building needs care.
 
 And it's safe. Only the hung sandwich drops. The CLT plate carries the floor, and the steel chain stops the sandwich before it can fall.
 
 Stewart Brand wrote that buildings live through upkeep. Here the upkeep is designed in, not deferred.
 
-### 14 Material (10:30)
+So the material is the sediment, and the material needs care. Now: where does that care happen in public?
 
-And this is how sediment becomes building. Every lift in this wall records a storm.
-1. Every load goes to the testing lab first: ash, lead, asbestos. Anything that fails leaves the cycle. That's why testing is the core of the program.
-2. Boulders are screened out for gabions; organics go to compost.
-3. The rest is blended to the right mix of sand, silt and clay.
-4. It's brought to the right moisture.
-5. It's rammed into walls in six-to-eight-inch lifts, or pressed into floor tiles from the same mix.
-6. It cures under a roof, on a raised base.
+## Part 4: The place
 
-Left unstabilized, it can always go back to soil.
+### 09 Site (7:15)
 
-> *If asked about contamination:* This is the strongest objection. Fire sediment carries ash from burned homes: asbestos, lead, plastics. My answer is that testing isn't a side function; it's the program's core. Contamination is exactly why this work needs a permanent, accountable public facility instead of a truck to a landfill.
+The site is the Arroyo Seco Stables, on the Lower Arroyo. Devil's Gate is upstream. Sediment from those mountains comes past here.
 
-### 15 Model (11:30)
+I chose it because it already has an audience. There's a bridge overhead, a public path along the river, and the stables, which already bring people here. I'm not inventing a public; I'm putting the work in front of one that already exists. The stables stay as part of the program, so the node grows out of a community use instead of replacing it.
+
+The building is three masses. They sit on the banks and reach over the channel.
+
+### 10 Overall section (8:00)
+
+In section, the three masses hang beneath the bridge. Look at what's around them: the road on the bridge, the path along the river, the bridge itself. Everyone passing has a view of the work.
+
+Each sliver stands on the bank on a single footing, so the channel and the riverbed stay clear. The node doesn't block the river; it puts the river's upkeep where people can see it.
+
+> *If asked about the program of each mass:* Mass 1 does receiving, testing, sorting, compost, the earth workshop and the stables. Mass 2 is over the channel: nursery, the gathering hub and crew housing. Mass 3, across the channel, is the treatment wetland and the release weir. An elevated public walk ties them together.
+
+## Part 5: The building
+
+### 11 Sliver section (8:45)
+
+This is one sliver, and it holds the whole loop. I'll read it top to bottom.
+
+Sediment is hoisted into the hopper. The hoist is buckets on pulleys: rope work anyone can understand at a glance. Then it's worked into soil and grown into plants.
+
+Why does every floor have its own shape? Because there's no typical floor when there's no typical task. Each plate holds one step of the loop, sized for that task and the crew doing it. And every plate hangs off one mast on one footing, so the plates step out on alternating sides to balance it. The rounded edges are the strap you just saw in the detail.
+
+And there are people on every floor. That's the point. Maintenance is labor. The crew is paid, skilled and permanent, with housing on site. They're drawn from people in recovery, in reentry, or displaced by the Eaton Fire. A recovering hillside and a recovering person need the same things: time, material and steady attention. The node gives the crew all three.
+
+> *If asked, "Why people, not machines?":* A machine yard behind a fence is exactly the hidden maintenance this project argues against. And the work really is hand work: testing, sorting out ash and debris, composting, mixing earth, pressing tile, raising plants and retensioning straps.
+
+> *If asked, "Unique shapes don't repeat. What about the network?":* What repeats from site to site is the assembly and the section (mast, sandwich, strap, veil), not the outline. The outline adapts to each bank.
+
+### 12 Sliver render (10:15)
+
+This is what you see from the river path: the sliver rises beside the bridge on a single red mast. The veil turns the work on each floor into silhouette. You don't see faces; you see work happening.
+
+### 13 Envelope (10:45)
+
+From above, you can see how the envelope works. The peel is where the building shows its work.
+
+*(Point as you go.)* Here, on the left, the veil peels open toward the path, so the work faces the public. Here, at the top, it closes and frosts where the crew needs privacy, as in the housing. And here, in the middle, the floor plates pull apart, which gives the crew room to reach the straps.
+
+So every peel is doing one of three jobs: showing the work, protecting privacy, or giving access.
+
+> *If asked, "Isn't this putting workers on display?":* The visibility is accountability for the work, not display of the workers. Silhouettes, frosted where privacy matters, and the housing is never on view.
+
+### 14 Model (11:30)
 
 The model tests how all of this reads. It has ply walls, layered floor plates and a clear printed veil. The question is whether the work comes through the skin as silhouette, and it does.
 
-## Part 5: Why architecture
+## Part 6: Why architecture
 
-### 16 Why architecture (12:00)
+### 15 Why architecture (12:00)
 
 So, why architecture, and not just a policy?
 
@@ -186,16 +183,16 @@ To come back to Ukeles: someone will pick up the garbage on Monday morning. This
 
 | Question | Go to slide | One line |
 |---|---|---|
-| Why the unique floor plates? | 08 | One task per plate, balanced on one mast; the edges come from the strap's radius. |
-| Why the peel? | 10 | Seen, private, or access: every peel does one of the three. |
+| Why the unique floor plates? | 11 | One task per plate, balanced on one mast; the edges come from the strap's radius. |
+| Why the peel? | 13 | Seen, private, or access: every peel does one of the three. |
 | How much maintenance is lost? | 03 | Fifteen years at Devil's Gate; the County is about 20 million cubic yards short on space. |
-| Why people? | 08 | Maintenance is labor; a machine yard is the hidden maintenance I'm arguing against. |
-| Why temporary? | 16 | It isn't. The building is permanent; the healing passes through it. |
-| Why does it sag? | 13 | The sag is the gauge; the chain makes it safe. |
-| Why cork? | 12 | It's a spring that keeps the strap tight, plus damping, rot resistance and a harvest cycle. |
-| Why a cable? | 11 | Hand-tensioned, light, no rust, and its creep becomes a schedule of care. |
-| Why that fastening? | 11 | Concealed if permanent, exposed if maintained. |
-| Why rammed earth? | 14 | It's the sediment itself; six steps from load to wall. |
-| Contamination? | 14 | Testing is the program's core. That's why it needs a public facility. |
-| Jurisdiction and funding? | 16 | County Flood Control and the Army Corps control the channel; Measure W is the most plausible funding path. |
-| Isn't one node too small? | 16 | It's a prototype; the network is the argument. |
+| Why people? | 11 | Maintenance is labor; a machine yard is the hidden maintenance I'm arguing against. |
+| Why temporary? | 15 | It isn't. The building is permanent; the healing passes through it. |
+| Why does it sag? | 08 | The sag is the gauge; the chain makes it safe. |
+| Why cork? | 06 | It's a spring that keeps the strap tight, plus damping, rot resistance and a harvest cycle. |
+| Why a cable? | 07 | Hand-tensioned, light, no rust, and its creep becomes a schedule of care. |
+| Why that fastening? | 07 | Concealed if permanent, exposed if maintained. |
+| Why rammed earth? | 05 | It's the sediment itself; six steps from load to wall. |
+| Contamination? | 05 | Testing is the program's core. That's why it needs a public facility. |
+| Jurisdiction and funding? | 15 | County Flood Control and the Army Corps control the channel; Measure W is the most plausible funding path. |
+| Isn't one node too small? | 15 | It's a prototype; the network is the argument. |
